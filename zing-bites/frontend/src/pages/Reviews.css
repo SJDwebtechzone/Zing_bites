@@ -1,0 +1,136 @@
+.reviews-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.reviews-hero {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.reviews-hero h1 span {
+  color: #FF6B35;
+}
+
+.reviews-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min-minmax(350px, 1fr));
+  gap: 30px;
+  padding-bottom: 80px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+  color: #FFB703;
+}
+
+.review-comment {
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+  position: relative;
+  padding-left: 20px;
+}
+
+.review-comment::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 2rem;
+  color: #FF6B35;
+  opacity: 0.3;
+}
+
+.admin-reply-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  border-left: 4px solid #1a1a2e;
+}
+
+.admin-reply-box h5 {
+  margin: 0 0 5px;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-reply-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 100px 0;
+  color: #888;
+}
+
+.no-reviews h3 {
+  margin-top: 20px;
+  color: #1a1a2e;
+}
+
+@media (max-width: 768px) {
+  .reviews-hero h1 { font-size: 2.2rem; }
+  .reviews-grid { grid-template-columns: 1fr; }
+}
